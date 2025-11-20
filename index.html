@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <article>
+        <div id="sekcja1">
+            <div id="zdjecie"><img src="zdjęcieCV.jpg" alt="zdjecieCV"></div>
+            <div id="opis">
+                <h1>Tomasz Serek</h1>
+                <h2>Front-End Developer</h2>
+                <p>Pasjonat tworzenia nowoczesnych stron internetowych.<br>
+                Specjalizuję się w HTML, CSS oraz JavaScript.<br>
+                Zainteresowany również backendem PHP i bazami danych MySQL.</p>
+            </div>
+        </div>
+
+        <div id="sekcja2">
+            <div class="social-container">
+                <a href="https://facebook.com" class="social facebook" target="_blank">Facebook</a>
+                <a href="https://youtube.com" class="social youtube" target="_blank">YouTube</a>
+                <a href="https://twitter.com" class="social twitter" target="_blank">Twitter</a>
+                <a href="https://linkedin.com" class="social linkedin" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+
+        <div id="sekcja3">
+            <h3 class="skill-title">Używane języki</h3>
+            <div class="skill-container">
+                <div class="skill">
+                    <div class="skill-name">
+                        <img src="html.png" alt="HTML" class="icon"> HTML
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">
+                        <img src="css.png" alt="CSS" class="icon"> CSS
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">
+                        <img src="js.png" alt="JS" class="icon"> JavaScript
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">
+                        <img src="php.png" alt="PHP" class="icon"> PHP &nbsp;&nbsp;
+                        <img src="mysql.png" alt="MySQL" class="icon"> MySQL
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+</main>
+
+<script>
+window.addEventListener('load', () => {
+    const progressBars = document.querySelectorAll('.skill-progress');
+    progressBars.forEach(bar => {
+        const value = bar.getAttribute('data-progress');
+        setTimeout(() => { bar.style.width = value; }, 200);
+    });
+});
+</script>
+
+</body>
+</html>
